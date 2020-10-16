@@ -15,6 +15,7 @@ namespace Scriptings.Converters.Core.Tests
                 yield return ConvertTest("(a,b,c) => a*100 + (b + c)/2", new object?[] { 5, 2, 8 }, 505);
                 yield return ConvertTest("a => a + \"test\"", new object?[] { "hoge" }, "hogetest");
                 yield return ConvertTest("(a,b) => a + b + \"hoge\"", new object?[] { "foo", null }, "foohoge");
+                yield return ConvertTest("(a,b,c,d,e) => a + b + c + d + e", new object?[] { 1, 2, 3, 4, 5 }, 1 + 2 + 3 + 4 + 5);
                 object?[] ConvertTest(string Parameter, object?[] Values, object? Expected)
                     => new object?[] { Parameter, Values, Expected };
             }
