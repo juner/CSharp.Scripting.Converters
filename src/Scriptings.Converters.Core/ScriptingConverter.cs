@@ -14,13 +14,24 @@ namespace Scriptings.Converters.Core
                 .WithReferences(typeof(Microsoft.CSharp.RuntimeBinder.Binder).Assembly);
             var (Target, Method) = (Delegate)(values.Length switch
             {
-                0 => throw new ArgumentException("support values size 1 or later.", nameof(values)),
+                0 => CSharpScript.EvaluateAsync<Func<dynamic>>($"(Func<dynamic>)({Script})", Options).Result,
                 1 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic>>($"(Func<dynamic, dynamic>)({Script})", Options).Result,
                 2 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic>)({Script})", Options).Result,
                 3 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
                 4 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
                 5 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
-                _ => throw new ArgumentException($"support values size max 5. size:{values.Length}", nameof(values)),
+                6 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                7 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                8 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                9 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                10 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                11 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                12 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                13 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                14 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                15 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                16 => CSharpScript.EvaluateAsync<Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>>($"(Func<dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic>)({Script})", Options).Result,
+                _ => throw new ArgumentOutOfRangeException(nameof(values), $"support values size max 16. size:{values.Length}"),
             });
             return Method.Invoke(Target, values);
         }
