@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Scriptings.Converters.Core\Scriptings.Converters.Core.csproj" />
+		<ProjectReference Include="..\Scripting.Converters.Core\Scripting.Converters.Core.csproj" />
 	</ItemGroup>
 
 </Project>
