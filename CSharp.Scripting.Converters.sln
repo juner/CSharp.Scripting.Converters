@@ -7,17 +7,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		src\Directory.Build.props = src\Directory.Build.props
+		test\Directory.Build.props = test\Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		src\Directory.Build.targets = src\Directory.Build.targets
+		test\Directory.Build.targets = test\Directory.Build.targets
+		global.json = global.json
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scripting.Converters.Core", "src\Scripting.Converters.Core\Scripting.Converters.Core.csproj", "{BDFE8F3A-BCA8-489F-A137-26A5661F64D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Scripting.Converters.Core", "src\CSharp.Scripting.Converters.Core\CSharp.Scripting.Converters.Core.csproj", "{BDFE8F3A-BCA8-489F-A137-26A5661F64D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scripting.Converters.Core.Tests", "test\Scripting.Converters.Core.Tests\Scripting.Converters.Core.Tests.csproj", "{9128050C-EA3B-43A6-96E6-08CBDA246DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Scripting.Converters.Core.Tests", "test\CSharp.Scripting.Converters.Core.Tests\CSharp.Scripting.Converters.Core.Tests.csproj", "{9128050C-EA3B-43A6-96E6-08CBDA246DD8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scripting.Converters.WPF", "src\Scripting.Converters.WPF\Scripting.Converters.WPF.csproj", "{E007B1CF-E149-4DF0-B641-553008AF2B78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Scripting.Converters.WPF", "src\CSharp.Scripting.Converters.WPF\CSharp.Scripting.Converters.WPF.csproj", "{E007B1CF-E149-4DF0-B641-553008AF2B78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripting.Converters.Forms", "src\Scripting.Converters.Forms\Scripting.Converters.Forms.csproj", "{10778E03-8A42-45B5-8E87-52FCBC772873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Scripting.Converters.Forms", "src\CSharp.Scripting.Converters.Forms\CSharp.Scripting.Converters.Forms.csproj", "{10778E03-8A42-45B5-8E87-52FCBC772873}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

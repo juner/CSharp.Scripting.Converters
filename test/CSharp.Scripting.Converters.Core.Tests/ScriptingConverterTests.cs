@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Scriptings.Converters.Core.Tests
+namespace CSharp.Scripting.Converters.Core.Tests
 {
     [TestClass()]
     public class ScriptingConverterTests

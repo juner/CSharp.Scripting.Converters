@@ -1,0 +1,61 @@
+<Project>
+  <ItemGroup>
+    <!-- Common -->
+    <PackageReference Update="System.Drawing.Common" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Web -->
+    <PackageReference Update="Dapper" Version="2.0.35" />
+    <PackageReference Update="log4net" Version="2.0.8" />
+    <PackageReference Update="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Update="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Update="Microsoft.AspNetCore.Identity.UI" Version="3.1.5" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5" />
+    <PackageReference Update="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Update="Syncfusion.Blazor" Version="18.1.0.58" />
+    <PackageReference Update="Syncfusion.XlsIO.Net.Core" Version="18.1.0.57" />
+    <PackageReference Update="Syncfusion.XlsIORenderer.Net.Core" Version="18.1.0.57" />
+    <PackageReference Update="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Desktop -->
+    <PackageReference Update="ClosedXML" Version="0.95.3" />
+    <PackageReference Update="DesktopBridge.Helpers" Version="1.2.2" />
+    <PackageReference Update="LivetCask" Version="3.2.3.1" />
+    <PackageReference Update="MaterialDesignThemes.MahApps" Version="0.1.5" />
+    <PackageReference Update="Microsoft.Bcl.AsyncInterfaces" Version="1.1.1" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.Json" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Logging" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Console" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Debug" Version="3.1.6" />
+    <PackageReference Update="Microsoft.Extensions.Options" Version="3.1.6" />
+    <PackageReference Update="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4"/>
+    <PackageReference Update="Prism.DryIoc" Version="7.2.0.1422" />
+    <PackageReference Update="Prism.Microsoft.DependencyInjection.Extensions" Version="7.2.0.1054" />
+    <PackageReference Update="Prism.Unity" Version="7.2.0.1422" />
+    <PackageReference Update="Prism.Wpf" Version="7.2.0.1422"/>
+    <PackageReference Update="ReactiveProperty.WPF" Version="7.4.1"/>
+    <PackageReference Update="Syncfusion.Diagram.WPF" Version="18.1.0.59" />
+    <PackageReference Update="Syncfusion.SfDiagram.WPF" Version="18.1.0.59" />
+    <PackageReference Update="Syncfusion.Grid.WPF" Version="18.1.0.59" />
+    <PackageReference Update="Syncfusion.SfGrid.WPF" Version="18.1.0.59" />
+    <PackageReference Update="Syncfusion.SfSkinManager.WPF" Version="18.1.0.59" />
+    <PackageReference Update="Syncfusion.Themes.MaterialLight.WPF" Version="18.1.0.59" />
+    <PackageReference Update="Syncfusion.Tools.WPF" Version="18.1.0.59"/>
+    <PackageReference Update="System.Text.Json" Version="4.7.2" />
+    <PackageReference Update="System.Text.Encoding.CodePages" Version="4.7.1" />
+    <PackageReference Update="VirtualizingWrapPanel" Version="1.5.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Test -->
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Update="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Update="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Update="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+</Project>

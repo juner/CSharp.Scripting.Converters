@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using Xamarin.Forms;
+using System.Windows.Data;
 
-namespace Scriptings.Converters.Forms
+namespace CSharp.Scripting.Converters.WPF
 {
     public class ScriptingConverter : IValueConverter, IMultiValueConverter
     {

@@ -1,0 +1,21 @@
+<Project>
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/junersproject/CSharp.Scripting.Converters</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/junersproject/CSharp.Scripting.Converters.git</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <LangVersion>latest</LangVersion>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Version>0.1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props','$(MSBuildThisFileDirectory)../'))"  />
+</Project>

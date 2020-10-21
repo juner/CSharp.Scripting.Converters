@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Scripting.Converters.Core\Scripting.Converters.Core.csproj" />
+    <ProjectReference Include="..\CSharp.Scripting.Converters.Core\CSharp.Scripting.Converters.Core.csproj" />
   </ItemGroup>
 
 </Project>
