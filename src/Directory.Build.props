@@ -1,6 +1,8 @@
 <Project>
   <PropertyGroup>
     <IsPackable>true</IsPackable>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Copyright>MIT</Copyright>
     <PackageProjectUrl>https://github.com/junersproject/CSharp.Scripting.Converters</PackageProjectUrl>
     <RepositoryUrl>https://github.com/junersproject/CSharp.Scripting.Converters.git</RepositoryUrl>
