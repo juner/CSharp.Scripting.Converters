@@ -24,7 +24,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ windows-latest ]
+        os: [ ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -34,15 +34,25 @@ jobs:
           dotnet-version: 3.1.301
       - name: Restore
         run: dotnet restore
-      - name: Build
+      - name: Build (windows)
+        if: matrix.os == 'windows-latest'
         run: dotnet build -c Release --no-restore
-      - name: Test
-        run: dotnet test -c Release
+      - name: Build (other)
+        if: matrix.os != 'windows-latest'
+        run: |
+        dotnet build test/CSharp.Scripting.Converters.Core.Tests -c Release --no-restore
+      - name: Test (windows)
+        if: matrix.os == 'windows-latest'
+        run: dotnet test -c Release --no-build
+      - name: Test (other)
+        if: matrix.os != 'windows-latest'
+        run: |
+        dotnet test test/CSharp.Scripting.Converters.Core.Tests -c Release --no-build
       - name: Pack
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'windows-latest'
         run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=0.0.${GITHUB_RUN_ID}-alpha --output nupkg
       - name: Upload Artifact
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'windows-latest'
         uses: actions/upload-artifact@v2
         with:
           name: nupkg
