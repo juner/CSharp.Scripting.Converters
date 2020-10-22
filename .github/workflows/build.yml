@@ -18,7 +18,6 @@ env:
   # Official NuGet Feed settings
   NUGET_FEED: https://api.nuget.org/v3/index.json
   NUGET_KEY: ${{ secrets.NUGET_KEY }}
-  GITHUB_RUN_NUMBER: ${{ GITHUB_RUN_NUMBER }}
 
 jobs:
   build:
@@ -53,7 +52,7 @@ jobs:
       - name: Pack
         if: matrix.os == 'windows-latest'
         run: |
-          echo 0.0.${{ GITHUB_RUN_NUMBER }}-ci
+          echo ${{ GITHUB_RUN_NUMBER }}
           dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=0.0.${{ GITHUB_RUN_NUMBER }}-ci --output nupkg
       - name: Upload Artifact
         if: matrix.os == 'windows-latest'
