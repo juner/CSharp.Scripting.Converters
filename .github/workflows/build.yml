@@ -52,8 +52,8 @@ jobs:
       - name: Pack
         if: matrix.os == 'windows-latest'
         run: |
-          echo 0.0.${{ env.GITHUB_RUN_NUMBER }}-ci
-          dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=0.0.${{ env.GITHUB_RUN_NUMBER }}-ci --output nupkg
+          echo 0.0.${{ GITHUB_RUN_NUMBER }}-ci
+          dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=0.0.${{ GITHUB_RUN_NUMBER }}-ci --output nupkg
       - name: Upload Artifact
         if: matrix.os == 'windows-latest'
         uses: actions/upload-artifact@v2
