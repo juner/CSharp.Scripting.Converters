@@ -52,7 +52,7 @@ jobs:
       - name: Pack
         if: matrix.os == 'windows-latest'
         run: |
-          $ci_use_version = "0.0." + $env::["GITHUB_RUN_NUMBER"] + "-ci"
+          $ci_use_version = "0.0." + $env:GITHUB_RUN_NUMBER + "-ci"
           dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=$ci_use_version --output nupkg
       - name: Upload Artifact
         if: matrix.os == 'windows-latest'
